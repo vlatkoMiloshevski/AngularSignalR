@@ -2,5 +2,5 @@
 
 <p ng-show="check">I'm at home</p>
 <p ng-show="!check">I'll take a walk</p>
-
+<a ng-if="$state.current.name=='home'" ui-sref="home.walk">walk controller</a>
 <div ui-view="" ng-controller="homeController"></div>

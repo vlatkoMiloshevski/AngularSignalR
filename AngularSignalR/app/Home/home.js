@@ -8,9 +8,9 @@
        
     }])
 
-    .controller('homeController', ['$scope', 'signalR', '$rootScope',
-        function ($scope, signalR, $rootScope) {
-
+    .controller('homeController', ['$scope', 'signalR', '$rootScope', '$state',
+        function ($scope, signalR, $rootScope, $state) {
+            $scope.$state = $state;
             $scope.check = true;
             // trigger server to return 
             signalR.sendClient();
