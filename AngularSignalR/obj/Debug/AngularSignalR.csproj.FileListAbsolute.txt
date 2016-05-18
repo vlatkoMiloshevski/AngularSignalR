@@ -129,6 +129,6 @@ C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\bin\Microsoft.Owin.Se
 C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.csprojResolveAssemblyReference.cache
 C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.dll
 C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.pdb
+C:\Users\Vlatko\Source\Repos\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.csprojResolveAssemblyReference.cache

@@ -1,0 +1,33 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<a ui-sref="home">home controller</a>
+<button class="btn btn-lg btn-success pull-left" type="submit" data-ng-click="addEmpl()">Add</button>
+<button class="btn btn-lg btn-success pull-left" type="submit" ng-disabled="number<2" data-ng-click="substractEmpl()">Substract</button>
+<button class="btn btn-lg btn-success pull-left" type="submit" ng-disabled="number<1" data-ng-click="addSubstractEmpl()">Add & Substract</button>
+
+<span ng-bind="number"></span>
+<div class="col-lg-6 pull-left">
+    <h1>Contacts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    First name
+                </th>
+                <th>
+                    Last name
+                </th>
+                <th>
+                    Address
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="empl in employees">
+                <td ng-bind="empl.firstName"></td>
+                <td ng-bind="empl.lastName"></td>
+                <td ng-bind="empl.address"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
