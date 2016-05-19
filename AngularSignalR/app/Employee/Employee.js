@@ -22,6 +22,7 @@
         function ($scope, $rootScope, $state, employeeService, $timeout) {
             $scope.$state = $state;
             $scope.number = 0;
+            $scope.timer = false;
 
             $scope.addEmpl = function () {
                 $scope.number++;
@@ -39,12 +40,14 @@
 
             $scope.addSubstractEmpl = function () {
                 $scope.number++;
+                $scope.timer = true;
                 employeeService.getAllEmployees($scope.number).then(function (employees) {
                     $scope.employees = employees;
                     $timeout(function () {
                         $scope.number--;
                         employeeService.getAllEmployees($scope.number).then(function (employees) {
                             $scope.employees = employees;
+                            $scope.timer = false;
                         });
                     }, 3000);
                 });
