@@ -1,6 +1,6 @@
-# AngularSignalR
-Simple tutorial for building AngularJS architecture for SPA website on the top of the MVC pattern and integration with SignalR (server hub and front-end angular service)
+# Angular * SignalR * Web.API * MVC
+Tutorial for building AngularJS architecture integrated with ASP.NET Web.API design pattern and behaving as independent SPA module as part of the ASP.NET MVC project/pattern. 
 
-<h4>Walk controller</h4> - toggling two span values means trigger once act on every browser clients - SignalR
+<h4>Walk controller</h4> - AngularJS - SignalR
 
-<h4>Employee controller</h4> - adding and substracting employees using Web.API (separately and using q promisses)
+<h4>Employee controller</h4> - AngularJS - Web.API
