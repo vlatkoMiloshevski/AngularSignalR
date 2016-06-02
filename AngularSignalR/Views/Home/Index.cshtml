@@ -7,19 +7,16 @@
 <head>
 </head>
 <body>
-    <a ui-sref="home.walk">walk controller</a>
-    <a ui-sref="home.employee">employee controller</a>
+
+    <span style="cursor:pointer" ui-sref="home.walk">walk</span>
+    <span> | </span>
+    <span style="cursor:pointer" ui-sref="home.employee">employees</span>
+    <hr />
 
     <div ui-view id="mainContent" ng-controller="MainCtrl">
     </div>
-    <!-- Third party scripts -->
-    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
-    <script src="~/Scripts/jquery.signalR-2.2.0.js"></script>
-    <script src="~/Scripts/angular.js"></script>
-    @*<script src="~/Scripts/angular-ui.js"></script>*@
-    <script src="~/Scripts/angular-ui-router.js"></script>
-    <script src="~/Scripts/angular-animate.js"></script>
-    <script src="~/Scripts/angular-sanitize.js"></script>
+
+   
     <script src="signalr/hubs"></script>
     <script>
         var app = angular.module('dogApp', ['ui.router', 'ngSanitize', 'Home', 'Walk', 'Employee']);

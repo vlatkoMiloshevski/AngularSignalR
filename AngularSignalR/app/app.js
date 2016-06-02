@@ -70,6 +70,9 @@ function ($q) {
                 }
                 return ($q.reject(response.data.message));
             }
+            else {
+                return ($q.reject(response.data.message));
+            }
         },
 
         handleSuccess: function handleSuccess(response) {

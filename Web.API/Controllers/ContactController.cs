@@ -10,6 +10,7 @@ using Web.API.Models.DTO;
 
 namespace Web.API.Controllers
 {
+    //[Authorize]
     public class ContactController : ApiController
     {
         public ContactController()
@@ -22,8 +23,7 @@ namespace Web.API.Controllers
         {
             try
             {
-                throw new Exception("test");
-                //var employeeList = new List<EmployeeDTO>();
+                //throw new Exception();
                 var employeeList = Builder<EmployeeDTO>.CreateListOfSize(number).Build().ToList();
                 return employeeList.ToList();
             }

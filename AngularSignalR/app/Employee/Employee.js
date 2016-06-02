@@ -51,7 +51,7 @@
                             $scope.employees = employees;
                             $scope.timer = false;
                         });
-                    }, 3000);
+                    }, 5000);
                 });
             }
 

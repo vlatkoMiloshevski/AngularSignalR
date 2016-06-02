@@ -265,3 +265,4 @@ C:\Users\Vlatko\Documents\Visual Studio 2015\Projects\AngularSignalR\AngularSign
 C:\Users\Vlatko\Documents\Visual Studio 2015\Projects\AngularSignalR\AngularSignalR\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Vlatko\Documents\Visual Studio 2015\Projects\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.dll
 C:\Users\Vlatko\Documents\Visual Studio 2015\Projects\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.pdb
+C:\Users\Vlatko\Documents\Visual Studio 2015\Projects\AngularSignalR\AngularSignalR\obj\Debug\AngularSignalR.csprojResolveAssemblyReference.cache
