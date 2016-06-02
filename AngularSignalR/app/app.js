@@ -34,11 +34,7 @@ app.config(function ($stateProvider, $urlRouterProvider, appBaseUrl) {
         var hub = $.connection.testHub;
 
         init = function () {
-            $.connection.hub.start()
-            //    .done(function () {
-            //}).fail(function (data) {
-            //})
-            ;
+            $.connection.hub.start();
         };
         sendClient = function () {
             hub.client.sendFromServer = function () {
@@ -56,30 +52,30 @@ app.config(function ($stateProvider, $urlRouterProvider, appBaseUrl) {
         }
     }]);
 
-    app.service("handleResponseService", ['$q',
-    function ($q) {
-        var api = {
-            handleError: function handleError(response) {
-                if (response.status != 401) {
-                    if (!angular.isObject(response.data)) {
-                        return ($q.reject("An unknown error occurred."));
-                    }
+app.service("handleResponseService", ['$q',
+function ($q) {
+    var api = {
+        handleError: function handleError(response) {
+            if (response.status != 401) {
+                if (!angular.isObject(response.data)) {
+                    return ($q.reject("An unknown error occurred."));
+                }
 
-                    if (response.data.exceptionMessage) {
-
-                    } else if (response.data.modelState) {
-
-                    } else if (response.data.message) {
-
-                    } 
+                if (response.data.exceptionMessage) {
+                    return ($q.reject(response.data.exceptionMessage));
+                } else if (response.data.modelState) {
+                    return ($q.reject(response.data.modelState));
+                } else if (response.data.message) {
                     return ($q.reject(response.data.message));
                 }
-            },
-
-            handleSuccess: function handleSuccess(response) {
-                return (response.data);
+                return ($q.reject(response.data.message));
             }
-        };
+        },
 
-        return api;
-    }]);
+        handleSuccess: function handleSuccess(response) {
+            return (response.data);
+        }
+    };
+
+    return api;
+}]);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using Web.API.Models.DTO;
 
@@ -15,35 +16,22 @@ namespace Web.API.Controllers
         {
 
         }
-        // GET: api/Contact
+
+        [HttpGet]
         public IEnumerable<EmployeeDTO> GetAllEmployees(int number)
         {
-            var employeeList = Builder<EmployeeDTO>.CreateListOfSize(number).Build().ToList();
-            return employeeList.ToList();
+            try
+            {
+                throw new Exception("test");
+                //var employeeList = new List<EmployeeDTO>();
+                var employeeList = Builder<EmployeeDTO>.CreateListOfSize(number).Build().ToList();
+                return employeeList.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new HttpException("exception occured while playing with employees");
+            }
         }
 
-        // GET: api/Contact/5
-        public string GetEmployeeById(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Contact
-        [HttpPost]
-        public int CreateEmployee([FromBody]int number)
-        {
-            //EmployeeDTO employee = Builder<EmployeeDTO>.CreateNew().Build();
-            return number++;
-        }
-
-        // PUT: api/Contact/5
-        public void UpdateEmployee(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Contact/5
-        public void DeleteEmployee(int id)
-        {
-        }
     }
 }

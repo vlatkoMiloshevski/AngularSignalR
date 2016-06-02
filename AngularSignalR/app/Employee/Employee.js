@@ -25,27 +25,29 @@
             $scope.timer = false;
 
             $scope.addEmpl = function () {
-                $scope.number++;
-                employeeService.getAllEmployees($scope.number).then(function (employees) {
+                employeeService.getAllEmployees($scope.number + 1).then(function (employees) {
+                    $scope.number++;
                     $scope.employees = employees;
-                });
+                }, (function (error) {
+                    alert(error);
+                }));
             }
 
             $scope.substractEmpl = function () {
-                $scope.number--;
-                employeeService.getAllEmployees($scope.number).then(function (employees) {
+                employeeService.getAllEmployees($scope.number - 1).then(function (employees) {
+                    $scope.number--;
                     $scope.employees = employees;
                 });
             }
 
             $scope.addSubstractEmpl = function () {
-                $scope.number++;
                 $scope.timer = true;
-                employeeService.getAllEmployees($scope.number).then(function (employees) {
+                employeeService.getAllEmployees($scope.number + 1).then(function (employees) {
+                    $scope.number++;
                     $scope.employees = employees;
                     $timeout(function () {
-                        $scope.number--;
-                        employeeService.getAllEmployees($scope.number).then(function (employees) {
+                        employeeService.getAllEmployees($scope.number - 1).then(function (employees) {
+                            $scope.number--;
                             $scope.employees = employees;
                             $scope.timer = false;
                         });

@@ -19,15 +19,14 @@ namespace AngularSignalR.Controllers
 
             return View();
         }
-
-        public ActionResult Sign()
+        
+        public ActionResult About()
         {
-            if (Request.Url != null && Request.ApplicationPath != null)
-            {
-                ViewBag.BaseUrl = Request.Url.Scheme + "://" + Request.Url.Authority + Request.ApplicationPath.TrimEnd('/') + "/";
-                ViewBag.ApiUrl = ConfigurationManager.AppSettings["ApiUrl"];
-            }
+            return View();
+        }
 
+        public ActionResult Contact()
+        {
             return View();
         }
     }
