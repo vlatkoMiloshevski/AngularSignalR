@@ -33,14 +33,14 @@
                 }));
             }
 
-            $scope.substractEmpl = function () {
+            $scope.subtractEmpl = function () {
                 employeeService.getAllEmployees($scope.number - 1).then(function (employees) {
                     $scope.number--;
                     $scope.employees = employees;
                 });
             }
 
-            $scope.addSubstractEmpl = function () {
+            $scope.addSubtractEmpl = function () {
                 $scope.timer = true;
                 employeeService.getAllEmployees($scope.number + 1).then(function (employees) {
                     $scope.number++;
